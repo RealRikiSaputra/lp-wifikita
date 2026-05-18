@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Wifi Kita</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        
+        <link rel="icon" href="img/logo.png" type="image/png">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar sticky-top px-4 py-2 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="display-6 text-dark"><img src="img/logo.png" alt="Logo">  Wifi Kita</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="gallery.html" class="dropdown-item">Our Gallery</a>
+                                <a href="attraction.html" class="dropdown-item">Attractions</a>
+                                <a href="package.html" class="dropdown-item">Paket</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="team-icon d-none d-xl-flex justify-content-center me-3">
+                        <a class="btn btn-square btn-light rounded-circle mx-1" href="https://www.facebook.com/people/Jelajahcom-id/61560270315813/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle mx-1" href="https://www.tiktok.com/@jelajah.comid?_t=8pCx4D1GIx5&_r=1"><i class="fab fa-tiktok"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle mx-1" href="https://www.instagram.com/jelajah.comid?igsh=MjRzODV0ZTE3c3By"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Carousel Start -->
+        <div class="header-carousel owl-carousel">
+            <div class="header-carousel-item">
+                <img src="img/bg1.jpg" class="img-fluid w-100" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container align-items-center py-4">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
+                                <div class="text-start">
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Wifi Kita</h4>
+                                    <h1 class="display-4 text-uppercase text-white mb-4">Jelajahi Dunia dengan Satu Sentuhan</h1>
+                                    <div class="d-flex flex-shrink-0">
+                                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Pilih Paket</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                                <div class="ticket-form p-5">
+                                    <h2 class="text-dark text-uppercase mb-4">Pesan paket wifi</h2>
+                                    <form id="orderForm">
+                                        <div class="row g-4">
+                                            <div class="col-12">
+                                                <input type="text" class="form-control border-0 py-2" id="name" placeholder="Name" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <input type="text" class="form-control border-0 py-2" id="nik" placeholder="NIK" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <select class="form-select border-0 py-2" id="package" aria-label="Default select example" required>
+                                                    <option value="" disabled selected>Select Packages</option>
+                                                    <option value="1">Paket 1</option>
+                                                    <option value="2">Paket 2</option>
+                                                    <option value="3">Paket 3</option>
+                                                    <option value="4">Paket 4</option>
+                                                    <option value="5">Paket 5</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea class="form-control border-0 py-2" id="address" placeholder="Alamat" required></textarea>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="button" class="btn btn-primary w-100 py-2 px-5" id="orderButton" onclick="sendToWhatsApp()">Order</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+
+        <!-- About Start -->
+        <div class="container-fluid about pb-5 mt-5">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="position-relative rounded">
+                            <div class="rounded" style="margin-top: 40px;">
+                                <div class="row g-0">
+                                    <div class="col-lg-12">
+                                        <div class="rounded mb-4">
+                                            <img src="img/logo.png" class="img-fluid rounded w-100" alt="WiFi">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div>
+                            <h1 class="display-5 mb-4">Wifi Kita : <span class="typing" style="color: #3cbeee;"></span></h1>
+                            <p class="mb-5">Wifi Kita adalah sebuah perusahaan yang bergerak dalam bidang IT(internet Teknologi) yang mana merupakan salah satu tolak ukur dari sebuah peradaban dan kemajuan teknologi yang saat ini berkembang dengan begitu pesatnya. Suatu kawasan yang berpenduduk tentunya akan membutuhkan adanya sarana informasi dan komunikasi dengan wilayah lain sebagai penunjang kehidupan masyarakat. Bahkan sarana dan prasarana komunikasi tersebut bisa dilihat sebagai tolak ukur kemajuan suatu populasi penduduk di wilayah tersebut. Dengan pertimbangan berbagai aspek tersebut kami Wifi Kita yang berpusat di Kabupaten Cilacap Jawa Tengah akan maju dan berkomitmen untuk menjadi perusahaan Nasional yang siap untuk berkompetisi dalam upaya memberikan pelayanan terbaik bagi masyarakat Indonesia dalam hal penyedia layanan internet dan Networking Solutions.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>        
+        <!-- About End -->
+
+        <!-- About Start -->
+        <div class="container-fluid about pb-5">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div>
+                            <h4 class="text-primary">Tentang Layanan WiFi Kami</h4>
+                            <h1 class="display-5 mb-4">Solusi WiFi Terbaik untuk Keluarga Anda</h1>
+                            <p class="mb-5">Kami menyediakan koneksi internet cepat dan stabil untuk memenuhi kebutuhan Anda. Nikmati pengalaman online tanpa hambatan dengan layanan WiFi kami yang andal dan terjangkau.</p>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex">
+                                        <div class="me-3"><i class="fas fa-wifi fa-3x text-primary"></i></div>
+                                        <div>
+                                            <h4>Koneksi Stabil</h4>
+                                            <p>Nikmati koneksi internet yang stabil dan cepat di rumah Anda.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex">
+                                        <div class="me-3"><i class="fas fa-bolt fa-3x text-primary"></i></div>
+                                        <div>
+                                            <h4>Kecepatan Tinggi</h4>
+                                            <p>Streaming, gaming, dan browsing dengan kecepatan tinggi tanpa lag.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex">
+                                        <div class="me-3"><i class="fas fa-dollar-sign fa-3x text-primary"></i></div>
+                                        <div>
+                                            <h4>Harga Terjangkau</h4>
+                                            <p>Dapatkan layanan berkualitas dengan harga yang terjangkau.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex">
+                                        <div class="me-3"><i class="fas fa-user-shield fa-3x text-primary"></i></div>
+                                        <div>
+                                            <h4>Keamanan Terjamin</h4>
+                                            <p>Data Anda aman dengan sistem keamanan terbaik.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="position-relative rounded">
+                            <div class="rounded" style="margin-top: 40px;">
+                                <div class="row g-0">
+                                    <div class="col-lg-12">
+                                        <div class="rounded mb-4">
+                                            <img src="img/wifi.jpg" class="img-fluid rounded w-100" alt="WiFi">
+                                        </div>
+                                        <div class="row gx-4 gy-0">
+                                            <div class="col-6">
+                                                <div class="counter-item bg-primary rounded text-center p-4 h-100">
+                                                    <div class="counter-item-icon mx-auto mb-3">
+                                                        <i class="fas fa-thumbs-up fa-3x text-white"></i>
+                                                    </div>
+                                                    <div class="counter-counting mb-3">
+                                                        <span class="text-white fs-2 fw-bold" data-toggle="counter-up">3</span>
+                                                        <span class="h1 fw-bold text-white">K +</span>
+                                                    </div>
+                                                    <h5 class="text-white mb-0">Pelanggan Puas</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="counter-item bg-dark rounded text-center p-4 h-100">
+                                                    <div class="counter-item-icon mx-auto mb-3">
+                                                        <i class="fas fa-award fa-3x text-white"></i>
+                                                    </div>
+                                                    <div class="counter-counting mb-3">
+                                                        <span class="text-white fs-2 fw-bold" data-toggle="counter-up">50</span>
+                                                        <span class="h1 fw-bold text-white"> +</span>
+                                                    </div>
+                                                    <h5 class="text-white mb-0">Layanan</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded bg-primary p-4 position-absolute d-flex justify-content-center" style="width: 90%; height: 80px; top: -40px; left: 50%; transform: translateX(-50%);">
+                                <h3 class="mb-0 text-white">Pengalaman 5 Tahun</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <!-- About End -->
+
+
+        <!-- Service Start -->
+        <div class="container-fluid service py-5">
+            <div class="container service-section py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Service Lainnya</h4>
+                    <h1 class="display-5 text-white mb-4">Jelajahi service kami</h1>
+                    <p class="mb-0 text-white">Jelajahi layanan kami yang beragam dan andal. Kami berkomitmen untuk memberikan yang terbaik untuk kebutuhan Anda.
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-0 col-md-1 col-lg-2 col-xl-2"></div>
+                    <div class="col-md-10 col-lg-8 col-xl-8 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-days p-4">
+                            <div class="py-2 border-bottom border-top d-flex align-items-center justify-content-between flex-wrap"><h4 class="mb-0 pb-2 pb-sm-0">Monday - Friday</h4> <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i>08:00 AM - 20:00 PM</p></div>
+                            <div class="py-2 border-bottom d-flex align-items-center justify-content-between flex-shrink-1 flex-wrap"><h4 class="mb-0 pb-2 pb-sm-0">Saturday - Sunday</h4> <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i>08:00 AM - 17:00 PM</p></div>
+                            <div class="py-2 border-bottom d-flex align-items-center justify-content-between flex-shrink-1 flex-wrap"><h4 class="mb-0">Holiday</h4> <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i>09:00 AM - 17:00 PM</p></div>
+                        </div>
+                    </div>
+                    <div class="col-0 col-md-1 col-lg-2 col-xl-2"></div>
+
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item p-4">
+                            <div class="service-content">
+                                <div class="mb-4">
+                                    <i class="fas fa-network-wired fa-4x"></i>
+                                </div>
+                                <a href="#" class="h4 d-inline-block mb-3">Bandwith Besar</a>
+                                <p class="mb-0">Jangan Khawatir kami menyediakan Bandwith yang besar, sehingga Anda bebas internet dengan cepat
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item p-4">
+                            <div class="service-content">
+                                <div class="mb-4">
+                                    <i class="fas fa-server fa-4x"></i>
+                                </div>
+                                <a href="#" class="h4 d-inline-block mb-3">Interkoneksi</a>
+                                <p class="mb-0">Wifi Kita memungkinkan Anda untuk menjalankan aktivitas online dengan lancar, tanpa hambatan, dan tanpa kompromi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item p-4">
+                            <div class="service-content">
+                                <div class="mb-4">
+                                    <i class="fas fa-sitemap fa-4x"></i>
+                                </div>
+                                <a href="#" class="h4 d-inline-block mb-3">Peering Exchange</a>
+                                <p class="mb-0">IIX JAKARTA NEUCENTRIX JOGJA
+                                    CITRAIX BIX JAKARTA
+                                    OPENIX/NICE
+                                    CBNIX SG.SG META
+                                    GGC
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="service-item p-4">
+                            <div class="service-content">
+                                <div class="mb-4">
+                                    <i class="fas fa-headset fa-4x"></i>
+                                </div>
+                                <a href="#" class="h4 d-inline-block mb-3">Layanan Pelanggan 24/7</a>
+                                <p class="mb-0">Kami siap membantu Anda kapan saja dengan layanan pelanggan yang tersedia 24/7.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- Paket Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="packages-item h-100">
+                            <h4 class="text-primary">Layanan Paket</h4>
+                            <h1 class="display-5 mb-4">PIlih paket terbaik untuk keluarga anda</h1>
+                            <p class="mb-4">Pilih paket terbaik untuk keluarga Anda. Nikmati layanan yang cepat dan andal dengan berbagai keuntungan yang kami tawarkan.
+                            </p>
+                            <p><i class="fa fa-check text-primary me-2"></i>Kecepatan internet hingga 40mbps</p>
+                            <p><i class="fa fa-check text-primary me-2"></i>Harga Terjangkau</p>
+                            <p><i class="fa fa-check text-primary me-2"></i>Unlimited Tanpa FUP</p>
+                            <p class="mb-5"><i class="fa fa-check text-primary me-2"></i>Banyak Promo yang di dapatkan</p>
+                            <a href="#" class="btn btn-primary rounded-pill py-3 px-5"> Pilih Paket</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="pricing-item bg-dark rounded text-center p-5 h-100">
+                            <div class="pb-4 border-bottom">
+                                <h2 class="mb-4 text-primary">Paket 1</h2>
+                                <h2 class="mb-0 text-primary">RP. 165.000<span class="text-body fs-5 fw-normal">/Bulan</span></h2>
+                            </div>
+                            <div class="py-4">
+                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Up To 8Mbps</p>
+                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Unlimited tanpa FUP</p>
+                            </div>
+                            <a href="#" class="btn btn-light rounded-pill py-3 px-5"> Order</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="pricing-item bg-primary rounded text-center p-5 h-100">
+                            <div class="pb-4 border-bottom">
+                                <h2 class="text-dark mb-4">Paket 2</h2>
+                                <h2 class="text-dark mb-0">RP. 220.000<span class="text-white fs-5 fw-normal">/Bulan</span></h2>
+                            </div>
+                            <div class="text-white py-4">
+                                <p class="mb-4"><i class="fa fa-check text-dark me-2"></i>Up To 10Mbps</p>
+                                <p class="mb-4"><i class="fa fa-check text-dark me-2"></i>Unlimited tanpa FUP</p>
+                            </div>
+                            <a href="#" class="btn btn-dark rounded-pill py-3 px-5">Order</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="pricing-item bg-dark rounded text-center p-5 h-100">
+                            <div class="pb-4 border-bottom">
+                                <h2 class="mb-4 text-primary">Paket 3</h2>
+                                <h2 class="mb-0 text-primary">RP. 275.000<span class="text-body fs-5 fw-normal">/Bulan</span></h2>
+                            </div>
+                            <div class="py-4">
+                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Up To 15Mbps</p>
+                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Unlimited tanpa FUP</p>
+                            </div>
+                            <a href="#" class="btn btn-light rounded-pill py-3 px-5"> Order</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="pricing-item bg-primary rounded text-center p-5 h-100">
+                            <div class="pb-4 border-bottom">
+                                <h2 class="text-dark mb-4">Paket 4</h2>
+                                <h2 class="text-dark mb-0">RP. 335.000<span class="text-white fs-5 fw-normal">/Bulan</span></h2>
+                            </div>
+                            <div class="text-white py-4">
+                                <p class="mb-4"><i class="fa fa-check text-dark me-2"></i>Up To 20Mbps</p>
+                                <p class="mb-4"><i class="fa fa-check text-dark me-2"></i>Unlimited tanpa FUP</p>
+                            </div>
+                            <a href="#" class="btn btn-dark rounded-pill py-3 px-5">Order</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="pricing-item bg-dark rounded text-center p-5 h-100">
+                            <div class="pb-4 border-bottom">
+                                <h2 class="mb-4 text-primary">Paket 5</h2>
+                                <h2 class="mb-0 text-primary">RP. 445.000<span class="text-body fs-5 fw-normal">/Bulan</span></h2>
+                            </div>
+                            <div class="py-4">
+                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Up To 30Mbps</p>
+                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Unlimited tanpa FUP</p>
+                            </div>
+                            <a href="#" class="btn btn-light rounded-pill py-3 px-5"> Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Paket End -->
+
+        <!-- Feature Start -->
+        <div class="container-fluid feature py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-item">
+                            <img src="img/promo.jpeg" class="img-fluid rounded w-100" alt="Image">
+                            <div class="feature-content p-4">
+                                <div class="feature-content-inner">
+                                    <h4 class="text-white">Promo 100K</h4>
+                                    <p class="text-white">Promo 100K untuk 3 bulan pertama
+                                    </p>
+                                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+        <!-- Attractions Start -->
+        <div class="container-fluid attractions py-5">
+            <div class="container attractions-section py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Support</h4>
+                    <h1 class="display-5 text-white mb-4">Kami memiliki banyak partner</h1>
+                    <p class="text-white mb-0">Berikut partner partner kami yang terkenal dan tidak di ragukan lagi
+                    </p>
+                </div>
+                <div class="owl-carousel attractions-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="attractions-item wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="img/apjii.png" class="img-fluid rounded w-100" alt="">
+                        <a href="#" class="attractions-name">APJII</a>
+                    </div>
+                    <div class="attractions-item wow fadeInUp" data-wow-delay="0.4s">
+                        <img src="img/cbn.png" class="img-fluid rounded w-100" alt="">
+                        <a href="#" class="attractions-name">CBN</a>
+                    </div>
+                    <div class="attractions-item wow fadeInUp" data-wow-delay="0.6s">
+                        <img src="img/FS.png" class="img-fluid rounded w-100" alt="">
+                        <a href="#" class="attractions-name">FS</a>
+                    </div>
+                    <div class="attractions-item wow fadeInUp" data-wow-delay="0.8s">
+                        <img src="img/IFORTE.png" class="img-fluid rounded w-100" alt="">
+                        <a href="#" class="attractions-name">IFORTE</a>
+                    </div>
+                    <div class="attractions-item wow fadeInUp" data-wow-delay="1s">
+                        <img src="img/kominfo.png" class="img-fluid rounded w-100" alt="">
+                        <a href="#" class="attractions-name">Kominfo</a>
+                    </div>
+                    <div class="attractions-item wow fadeInUp" data-wow-delay="1.2s">
+                        <img src="img/telkom.png" class="img-fluid rounded w-100" alt="">
+                        <a href="#" class="attractions-name">Telkom</a>
+                    </div>
+                    <div class="attractions-item wow fadeInUp" data-wow-delay="1.4s">
+                        <img src="img/TIS.png" class="img-fluid rounded w-100" alt="">
+                        <a href="#" class="attractions-name">TIS</a>
+                    </div>
+                    <div class="attractions-item wow fadeInUp" data-wow-delay="1.6s">
+                        <img src="img/xl.png" class="img-fluid rounded w-100" alt="">
+                        <a href="#" class="attractions-name">XL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Attractions End -->
+
+        <!-- Gallery Start -->
+        <div class="container-fluid gallery pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Galeri Kami</h4>
+                    <h1 class="display-5 mb-4">Momen Terbaik di Wifi Kita</h1>
+                    <p class="mb-0">Jelajahi kumpulan momen berharga yang menunjukkan perjalanan dan pencapaian Wifi Kita. Dari acara komunitas hingga perayaan pencapaian, setiap momen yang diabadikan mencerminkan dedikasi kami dalam memberikan solusi WiFi terbaik untuk keluarga dan bisnis.</p>
+                </div>
+                <div class="row g-4" id="gallery-content">
+                    <!-- Gallery items will be loaded here -->
+                </div>
+            </div>
+        </div>
+        <!-- Gallery End -->
+
+
+
+        <!-- Blog Start -->
+        <div class="container-fluid blog pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Blog</h4>
+                    <h1 class="display-5 mb-4">Blog Dan Halaman kami</h1>
+                    <p class="mb-0">Temukan berbagai artikel dan informasi menarik seputar layanan kami, tips, dan wawasan yang dapat membantu Anda lebih memahami kebutuhan internet dan teknologi terkini. Setiap artikel kami sajikan dengan penuh perhatian untuk memberikan nilai tambah bagi Anda.
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="https://www.facebook.com/people/Jelajahcom-id/61560270315813/">
+                                    <img src="img/fb.jpeg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </a>
+                                <div class="blog-category py-2 px-4">Facebook</div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <a href="https://www.facebook.com/people/Jelajahcom-id/61560270315813/" class="h4 d-inline-block mb-4">Halaman Resmi Kami</a>
+                                <p class="mb-4">Temukan informasi terkini, panduan, dan berita menarik yang kami bagikan di halaman resmi kami. Jelajahi konten kami untuk mendapatkan wawasan lebih lanjut tentang layanan dan solusi WiFi terbaik dari Wifi Kita.
+                                </p>
+                                <a href="https://www.facebook.com/people/Jelajahcom-id/61560270315813/" class="btn btn-primary rounded-pill py-2 px-4">Selengkapnya <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="https://www.tiktok.com/@jelajah.comid?_t=8pCx4D1GIx5&_r=1">
+                                    <img src="img/tt.jpeg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </a>
+                                <div class="blog-category py-2 px-4">Tiktok</div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <a href="https://www.tiktok.com/@jelajah.comid?_t=8pCx4D1GIx5&_r=1" class="h4 d-inline-block mb-4">Halaman Resmi Kami</a>
+                                <p class="mb-4">Temukan informasi terkini, panduan, dan berita menarik yang kami bagikan di halaman resmi kami. Jelajahi konten kami untuk mendapatkan wawasan lebih lanjut tentang layanan dan solusi WiFi terbaik dari Wifi Kita.
+                                </p>
+                                <a href="https://www.tiktok.com/@jelajah.comid?_t=8pCx4D1GIx5&_r=1" class="btn btn-primary rounded-pill py-2 px-4">Selengkapnya <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="https://www.instagram.com/jelajah.comid?igsh=MjRzODV0ZTE3c3By">
+                                    <img src="img/ig.jpeg" class="img-fluid w-100 rounded-top" alt="Image">
+                                </a>
+                                <div class="blog-category py-2 px-4">Instagram</div>
+                            </div>
+                            <div class="blog-content p-4">
+                                <a href="https://www.instagram.com/jelajah.comid?igsh=MjRzODV0ZTE3c3By" class="h4 d-inline-block mb-4">Halaman Resmi Kami</a>
+                                <p class="mb-4">Temukan informasi terkini, panduan, dan berita menarik yang kami bagikan di halaman resmi kami. Jelajahi konten kami untuk mendapatkan wawasan lebih lanjut tentang layanan dan solusi WiFi terbaik dari Wifi Kita.
+                                </p>
+                                <a href="https://www.instagram.com/jelajah.comid?igsh=MjRzODV0ZTE3c3By" class="btn btn-primary rounded-pill py-2 px-4">Selengkapnya <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+
+
+        <!-- Team Start -->
+        <div class="container-fluid team pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Team Kami</h4>
+                    <p class="mb-0">Kami adalah tim berdedikasi di Wifi Kita, bekerja dengan penuh semangat untuk menghadirkan layanan internet cepat dan handal bagi semua pelanggan. Dengan pengalaman dan keahlian yang luas, kami siap memberikan solusi WiFi terbaik yang sesuai dengan kebutuhan Anda.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item p-4">
+                            <div class="team-content">
+                                <div class="d-flex justify-content-between border-bottom pb-4">
+                                    <div class="text-start">
+                                        <h4 class="mb-0">Faiq Akhmal</h4>
+                                        <p class="mb-0">NOC</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/faiq.png" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                    </div>
+                                </div>
+                                <div class="team-icon rounded-pill my-4 p-3">
+                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <p class="text-center mb-0">Faiq Akhmal bertanggung jawab sebagai NOC di Wifi Kita, memastikan kelancaran jaringan dan stabilitas layanan internet. Dengan keahlian dan komitmen tinggi, beliau berperan penting dalam menjaga kualitas dan keandalan koneksi untuk semua pelanggan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-fluid testimonial py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Testimoni</h4>
+                    <h1 class="display-5 text-white mb-4">Apa kata client kami?</h1>
+                    <p class="text-white mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+                    </p>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="testimonial-item p-4">
+                        <p class="text-white fs-4 mb-4">Saya sangat puas dengan layanan Wifi Kita. Koneksi internetnya cepat dan andal, membuat semua aktivitas online saya jadi lebih efisien. Baik untuk keperluan kerja maupun hiburan, Wifi Kita selalu memberikan performa terbaik. Tidak ada lagi keluhan tentang koneksi lambat atau terputus-putus.
+                        </p>
+                        <div class="testimonial-inner">
+                            <div class="testimonial-img">
+                                <img src="img/hrd-Radio.jpeg" class="img-fluid" alt="Image">
+                                <div class="testimonial-quote btn-lg-square rounded-circle"><i class="fa fa-quote-right fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Imam Suprayogi</h4>
+                                <p class="text-start text-white">Manager Radio Pasopati FM</p>
+                                <div class="d-flex text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item p-4">
+                        <p class="text-white fs-4 mb-4">Layanan internet dari Wifi Kita sungguh luar biasa. Kecepatannya sangat stabil dan memudahkan saya dalam bekerja dari rumah tanpa gangguan. Saya bisa melakukan video conference, mengunduh file besar, dan streaming tanpa masalah. Benar-benar solusi internet terbaik yang pernah saya gunakan.
+                        </p>
+                        <div class="testimonial-inner">
+                            <div class="testimonial-img">
+                                <img src="img/ceo-tv.png" class="img-fluid" alt="Image">
+                                <div class="testimonial-quote btn-lg-square rounded-circle"><i class="fa fa-quote-right fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Pupung</h4>
+                                <p class="text-start text-white">CEO Caruban TV</p>
+                                <div class="d-flex text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item p-4">
+                        <p class="text-white fs-4 mb-4">Tim support Wifi Kita sangat responsif dan profesional. Setiap kali ada masalah, mereka selalu siap memberikan solusi terbaik dengan cepat. Mereka membantu saya mengatasi kendala teknis dengan mudah dan memastikan koneksi internet saya tetap optimal. Pelayanan pelanggan yang sangat memuaskan.
+                        </p>
+                        <div class="testimonial-inner">
+                            <div class="testimonial-img">
+                                <img src="img/ceo-wifi.png" class="img-fluid" alt="Image">
+                                <div class="testimonial-quote btn-lg-square rounded-circle"><i class="fa fa-quote-right fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Putut</h4>
+                                <p class="text-start text-white">Manager KSU BMT El Sejahtera</p>
+                                <div class="d-flex text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item">
+                            <a href="index.html" class="p-0">
+                                
+                                <h4 class="text-white mb-4"><img src="img/logo.png" style="width: 50px; height: auto;" alt="Logo"></i> Wifi Kita</h4>
+                            </a>
+                            <p class="mb-2">Jangan ragu untuk menghubungi kami jika ada pertanyaan, konsultasi, atau pendapat yang ingin Anda diskusikan. Mari bersama-sama menjelajahi kemungkinan dan menciptakan sesuatu yang luar biasa!</p>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                <p class="text-white mb-0">Perum Cendana Asri No.30, Pahonjean Majenang</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-phone-alt text-primary me-3"></i>
+                                <p class="text-white mb-0">0851-6167-1600</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-2">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Service</a>
+                            <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-2">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Support</h4>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Disclaimer</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Support</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Help</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Opening Hours</h4>
+                            <div class="opening-date mb-3 pb-3">
+                                <div class="opening-clock flex-shrink-0">
+                                    <h6 class="text-white mb-0 me-auto">Monday - Friday:</h6>
+                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 08:00 AM - 20:00 PM</p>
+                                </div>
+                                <div class="opening-clock flex-shrink-0">
+                                    <h6 class="text-white mb-0 me-auto">Satur - Sunday:</h6>
+                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 08:00 AM - 17:00 PM</p>
+                                </div>
+                                <div class="opening-clock flex-shrink-0">
+                                    <h6 class="text-white mb-0 me-auto">Holiday:</h6>
+                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 09:00 AM - 17:00 PM</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-white mb-2">Payment Accepted</p>
+                                <img src="img/payment.png" class="img-fluid" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://wifikita-97fac-default-rtdb.firebaseio.com/wifikita.json')
+                .then(response => response.json())
+                .then(data => {
+                    const galleryContainer = document.getElementById('gallery-content');
+                    data.forEach((item, index) => {
+                        const colDiv = document.createElement('div');
+                        colDiv.className = `col-md-${index % 2 === 0 ? '6' : '3'} wow fadeInUp`;
+                        colDiv.dataset.wowDelay = `${0.2 + index * 0.2}s`;
+    
+                        const galleryItem = document.createElement('div');
+                        galleryItem.className = 'gallery-item';
+    
+                        const img = document.createElement('img');
+                        img.src = item.img;
+                        img.alt = item.alt;
+                        img.className = 'img-fluid rounded w-100 h-100';
+    
+                        const searchIcon = document.createElement('div');
+                        searchIcon.className = 'search-icon';
+    
+                        const link = document.createElement('a');
+                        link.href = item.img;
+                        link.className = 'btn btn-light btn-lg-square rounded-circle';
+                        link.dataset.lightbox = item.dataLightbox;
+    
+                        const icon = document.createElement('i');
+                        icon.className = 'fas fa-search-plus';
+    
+                        link.appendChild(icon);
+                        searchIcon.appendChild(link);
+                        galleryItem.appendChild(img);
+                        galleryItem.appendChild(searchIcon);
+                        colDiv.appendChild(galleryItem);
+                        galleryContainer.appendChild(colDiv);
+                    });
+                })
+                .catch(error => console.error('Error loading gallery:', error));
+        });
+        function sendToWhatsApp() {
+            var name = document.getElementById('name').value;
+            var nik = document.getElementById('nik').value;
+            var package = document.getElementById('package').value;
+            var address = document.getElementById('address').value;
+
+            // Encode the data to be sent via WhatsApp
+            var message = `*Order Paket WiFi*\n\nName: ${name}\nNIK: ${nik}\nPackage: Paket ${package}\nAlamat: ${address}`;
+            var encodedMessage = encodeURIComponent(message);
+
+            // Create the WhatsApp URL
+            var whatsappURL = `https://wa.me/6285161671600?text=${encodedMessage}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, '_blank');
+        }
+
+    </script>
+
+    
+    </body>
+
+</html>
